@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI HTML</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="chart.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <i class="fa fa-video-camera" aria-hidden="true"></i>
+        <a href="#home" class="active">vAds</a>
+        <i class="fa fa-bars" onclick="w3_close()"></i>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 collapse primary_div show d-md-flex bg-light pt-2 pl-0 min-vh-100">
+                <h4>HEAD 1</h4>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 param">
+                            <div class="inner">
+                                <h4 class="desc">Parameter 1</h4>
+                                <h5 class="desc">Description <br></h5>
+                                <div class="col-md-4" id="chart_div"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 param">
+                            <div class="inner">
+                                <h4 class="desc">Parameter 2</h4>
+                                <h5 class="desc">Description</h5>
+                                <div class="pie_charts">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3" id="chart1_div"></div>
+                                        <div class="col-md-3" id="chart2_div"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3" id="chart3_div"></div>
+                                        <div class="col-md-3" id="chart4_div"></div>
+                                        <div class="col-md-3" id="chart5_div"></div>
+                                    </div>
+                                </div>
+                                </bt>
+                            </div>
+                        </div>
+                        <div class="col-md-4 param">
+                            <div class="inner">
+                                <h4 class="desc">Parameter 3</h4>
+                                <h5 class="desc">Description</h5>
+                                <div id="multipleTrendChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>HEAD 1.1</h4>
+                        <div class="table">
+                            <table>
+                                <th>#</th>
+                                <th>Coupon
+                                    <i class="fa fa-search" id="tooltip" aria-hidden="true"></i>
+                                    <span class="tooltiptext">
+                                        <input type="text" class="searchbox" placeholder="search by coupon name" />
+                                    </span>
+                                </th>
+                                <th>Type <i class="fa fa-filter" aria-hidden="true"></i>
+                                    <span class="filtertext">
+                                        <input type="checkbox" value="All" />All<br>
+                                        <input type="checkbox" value="Active" />Active<br>
+                                        <input type="checkbox" value="Inactive" />Inactive
+                                    </span>
+                                </th>
+                                <th>Status <i class="fa fa-filter" aria-hidden="true"></i> </th>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ADFRWE</td>
+                                    <td>Type 1</td>
+                                    <td class="active">ACTIVE</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>OPLSDSd</td>
+                                    <td>Type 1</td>
+                                    <td class="inactive">INACTIVE</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>PAOSDOADUU</td>
+                                    <td>Type 2</td>
+                                    <td class="active">ACTIVE</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>BIG123</td>
+                                    <td>Type 2</td>
+                                    <td class="inactive">INACTIVE</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
+                <ul class="nav flex-column flex-nowrap overflow-hidden">
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#"><span class="d-none d-sm-inline">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#"><span class="d-none d-sm-inline">Coupons</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#"><span
+                                class="d-none d-sm-inline">Subscribers</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#"><span class="d-none d-sm-inline">Contents</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed text-truncate" data-toggle="collapse">
+                            <span class="d-none d-sm-inline">Transcode</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed text-truncate" href="#submenu2" data-toggle="collapse" data-target="#submenu2">
+                            <span class="d-none d-sm-inline">Reports</span></a>
+                        <div class="collapse" id="submenu2" aria-expanded="false">
+                            <ul class="flex-column pl-2 nav">
+                                <li class="sub-nav-item"><a class="nav-link py-0" href="#"><span>List Tickets</span></a>
+                                </li>
+                                <li class="sub-nav-item"><a class="nav-link py-0" href="#"><span>List Staff</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#">
+                            <span class="d-none d-sm-inline">Payment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#">
+                            <span class="d-none d-sm-inline">Support</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#">
+                            <span class="d-none d-sm-inline">Notifications</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-truncate" href="#">
+                            <span class="d-none d-sm-inline">Logout</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="topnav" id="bottomnav">
+        <a href="#home" class="active">@2021 Mobiotics</a>
+    </div>
+</body>
+
+</html>
+
+</html>
